@@ -1,5 +1,4 @@
 // Problem-01 : Tax Calculator
-
 function calculateTax(income, expenses) {
     if (income >=0 && expenses >= 0) {
         let tax;
@@ -24,8 +23,7 @@ function sendNotification(email) {
 }
 
 // Problem-03: Checking Digits Inside a Name
-
-function checkDigitsInName (name) {
+function checkDigitsInName(name) {
     if (typeof name === 'string') {
         return /[0-9]/.test(name);
     }
@@ -34,5 +32,23 @@ function checkDigitsInName (name) {
     }
 }
 
+// Problem 04 : Calculate Admission Final Score
+function calculateFinalScore(obj) {
+    if (typeof obj === "object") {
+        let finalScore = obj.testScore + obj.schoolGrade;
+        obj.isFFamily ? finalScore += 20 : finalScore += 0;
+        if (finalScore >= 80) {
+            return true;
+        }
+        else {
+            return false;
+        };
+    }
+    else {
+        return "Invalid Input";
+    };
+}
+
 // Just for testing purpose. Won't be submitted.
-console.log(checkDigitsInName("Kazi Yusuf"));
+const student1010 = { name: "Rajib", testScore: 15,  schoolGrade: 25, isFFamily : true  };
+console.log(calculateFinalScore(student1010));
