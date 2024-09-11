@@ -23,5 +23,16 @@ function sendNotification(email) {
     }
 }
 
+// Problem-03: Checking Digits Inside a Name
+
+function checkDigitsInName (name) {
+    if (typeof name === 'string') {
+        return /[0-9]/.test(name);
+    }
+    else {
+        return "Invalid Input";
+    }
+}
+
 // Just for testing purpose. Won't be submitted.
-console.log(sendNotification("yfaka001@gmail.com"));
+console.log(checkDigitsInName("Kazi Yusuf"));
