@@ -11,5 +11,17 @@ function calculateTax(income, expenses) {
     }
 }
 
-// Just for testing purpose. Not will be submitted.
-console.log(calculateTax(6000, -1500));
+// Problem 02 : Notification Generator
+function sendNotification(email) {
+    if (email.includes('@')) {
+        const userName = email.slice(0, email.indexOf("@"));
+        const domainName = email.slice(email.indexOf("@") + 1);
+        return `${userName} sent you an email from ${domainName}`;
+    }
+    else {
+        return "Invalid Email";
+    }
+}
+
+// Just for testing purpose. Won't be submitted.
+console.log(sendNotification("yfaka001@gmail.com"));
