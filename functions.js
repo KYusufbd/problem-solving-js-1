@@ -49,6 +49,24 @@ function calculateFinalScore(obj) {
     };
 }
 
+// Problem 05:  Predict Avarage Waiting Time
+function waitingTime(waitingTimes, serialNumber) {
+    if (Array.isArray(waitingTimes) && typeof serialNumber === "number") {
+        let totalWaitingTimes = 0;
+        for (let i = 0; i < waitingTimes.length; i++) {
+            totalWaitingTimes += waitingTimes[i];
+        };
+        const avgWaitingTimes = totalWaitingTimes / waitingTimes.length;
+        const peopleBeforeHer = serialNumber - waitingTimes.length - 1;
+        // Testing
+        console.log(peopleBeforeHer);
+
+        return parseInt(avgWaitingTimes * peopleBeforeHer);
+    }
+    else {
+        return "Invalid Input";
+    }
+}
+
 // Just for testing purpose. Won't be submitted.
-const student1010 = { name: "Rajib", testScore: 15,  schoolGrade: 25, isFFamily : true  };
-console.log(calculateFinalScore(student1010));
+console.log(waitingTime([ 3, 5, 7, 11, 6 ], 10));
