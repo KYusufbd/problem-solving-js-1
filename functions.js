@@ -7,8 +7,8 @@ function calculateTax(income, expenses) {
     }
     else {
         return "Invalid Input";
-    }
-}
+    };
+};
 
 // Problem 02 : Notification Generator
 function sendNotification(email) {
@@ -19,8 +19,8 @@ function sendNotification(email) {
     }
     else {
         return "Invalid Email";
-    }
-}
+    };
+};
 
 // Problem-03: Checking Digits Inside a Name
 function checkDigitsInName(name) {
@@ -29,8 +29,8 @@ function checkDigitsInName(name) {
     }
     else {
         return "Invalid Input";
-    }
-}
+    };
+};
 
 // Problem 04 : Calculate Admission Final Score
 function calculateFinalScore(obj) {
@@ -47,7 +47,7 @@ function calculateFinalScore(obj) {
     else {
         return "Invalid Input";
     };
-}
+};
 
 // Problem 05:  Predict Avarage Waiting Time
 function waitingTime(waitingTimes, serialNumber) {
@@ -56,14 +56,14 @@ function waitingTime(waitingTimes, serialNumber) {
         for (let i = 0; i < waitingTimes.length; i++) {
             totalWaitingTimes += waitingTimes[i];
         };
-        const avgWaitingTimes = totalWaitingTimes / waitingTimes.length;
+        const avgWaitingTimesRounded = Math.round(totalWaitingTimes / waitingTimes.length);
         const peopleBeforeHer = serialNumber - waitingTimes.length - 1;
-        return parseInt(avgWaitingTimes * peopleBeforeHer);
+        return avgWaitingTimesRounded * peopleBeforeHer;
     }
     else {
         return "Invalid Input";
-    }
-}
+    };
+};
 
 // Just for testing purpose. Won't be submitted.
-console.log(waitingTime([ 3, 5, 7, 11, 6 ], 10));
+console.log(waitingTime([6], 4));
