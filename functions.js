@@ -58,9 +58,6 @@ function waitingTime(waitingTimes, serialNumber) {
         };
         const avgWaitingTimes = totalWaitingTimes / waitingTimes.length;
         const peopleBeforeHer = serialNumber - waitingTimes.length - 1;
-        // Testing
-        console.log(peopleBeforeHer);
-
         return parseInt(avgWaitingTimes * peopleBeforeHer);
     }
     else {
